@@ -27,12 +27,11 @@ class MOT20(ImageDataset):
         - images: ?
     """
     _junk_pids = [0, -1]
-    dataset_dir = 'MOT20'
+    dataset_dir = 'MOT20-ReID'  # Updated to point to ReID patches
     dataset_url = ''  # 'https://motchallenge.net/data/MOT20.zip'
     dataset_name = "MOT20"
 
-    def __init__(self, root='datasets', **kwargs):
-        # self.root = osp.abspath(osp.expanduser(root))
+    def __init__(self, root='/kaggle/working/BotSort/fast_reid/datasets', **kwargs):
         self.root = root
         self.dataset_dir = osp.join(self.root, self.dataset_dir)
 

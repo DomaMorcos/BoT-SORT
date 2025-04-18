@@ -4,9 +4,13 @@ MODEL:
   BACKBONE:
     DEPTH: 101x
     WITH_IBN: True
+    PRETRAIN_PATH: "/kaggle/working/BotSort/pretrained/msmt_sbs_R101-ibn.pth"
 
 DATASETS:
   NAMES: ("MOT20",)
   TESTS: ("MOT20",)
 
 OUTPUT_DIR: logs/mot20/sbs_R101-ibn
+
+TEST:
+  EVAL_PERIOD: 0
